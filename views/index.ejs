@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <%- include('../partial/head.ejs') %>
+  </head>
+  <body>
+    <div class="body">
+      <%- include('../partial/nav.ejs') %>
+      <!-- give it space -->
+
+      <% blogs.forEach((blog) => { %>
+      <a href="/blogs/ <%= blog._id %>" class="blog-link"
+        ><div class="blogs">
+          <h1><%= blog.title %></h1>
+          <p><%= blog.snippet %></p>
+        </div></a
+      >
+      <% }) %>
+    </div>
+
+    <%- include('../partial/footer.ejs') %>
+  </body>
+</html>
